@@ -10,6 +10,7 @@ namespace Lambda001
     {
         delegate int Calculate(int p_a, int p_b);
         delegate void DoShoething();
+        delegate String Concatenate(string[] args);
         static void Main(string[] args)
         {
             Calculate calc = (a, b) => a + b;
@@ -24,7 +25,18 @@ namespace Lambda001
             };
 
             DoIt();
-        
+
+            Concatenate concat =
+
+                (array) =>
+                {
+                    string result = "";
+                    foreach (string str in array)
+                    {
+                        result += str;
+                    }
+                    return result;
+                };  
         }
     }
 }

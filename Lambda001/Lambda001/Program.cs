@@ -9,7 +9,7 @@ namespace Lambda001
     class Program
     {
         delegate int Calculate(int p_a, int p_b);
-        delegate void DoShoething();
+        delegate void DoSomething();
         delegate String Concatenate(string[] args);
         static void Main(string[] args)
         {
@@ -17,7 +17,7 @@ namespace Lambda001
 
             Console.WriteLine($"{3} + {4} : {calc(3, 4)}");
 
-            DoShoething DoIt = () =>
+            DoSomething DoIt = () =>
             {
                 Console.WriteLine("Lambda Test");
                 Console.WriteLine("Lambda Test01");
